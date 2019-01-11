@@ -90,7 +90,6 @@ class Student
 
     DB[:conn].execute(sql, x).map do |row|
       first_student=self.new_from_db(row)
-      first_student.first
-    end
+    end.first
   end
 end
